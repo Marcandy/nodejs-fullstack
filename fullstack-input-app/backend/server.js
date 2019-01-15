@@ -6,7 +6,7 @@ const Data = require("./data");
 
 const API_PORT = 3001;
 const app = express();
-const route = express.router();
+const router = express.Router();
 
 const dbRoute = "mongodb://marcandy:fullstack-test5@ds157574.mlab.com:57574/node-fullstack";
 
@@ -21,7 +21,7 @@ db.once("open", () => console.log("connected to the database"));
 
 db.on("error", console.error.bind(console, "MongoDB connection error"));
 
-app.use(bodyParser.urlencoded)({ extended: false });
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
@@ -84,4 +84,4 @@ app.use("/api", router);
 
 
 //listen
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_POR}`));
+app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
