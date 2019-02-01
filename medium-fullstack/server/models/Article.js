@@ -39,7 +39,7 @@ ArticleSchema.methods.addAuthor = function(author_id) {
     return this.save();
 }
 
-ArticleSchema.methods.getUserArticle = funciton (_id) {
+ArticleSchema.methods.getUserArticle = function(_id) {
     Article.find({'author': _id}).then((article) => {
         return article
     })
