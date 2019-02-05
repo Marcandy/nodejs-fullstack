@@ -13,14 +13,14 @@ const url = process.env.MONGODB_URI || "mongodb://localhost:27017/medium";
 
 
 cloudinary.config({
-    cloud_name: 'TEST1',
-    api_key: 'TEST2',
-    api_secret: 'TEST3'
+    cloud_name: 'dfc14x7hv',
+    api_key: '857741971832443',
+    api_secret: '2b3RlGf945cX46FCmXBaLCxXesE'
 });
 
 try {
     mongoose.connect(url, {
-        // useMon
+        // useMongoClient: true
     })
 } catch (error) {
     //
